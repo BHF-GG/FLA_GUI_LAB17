@@ -55,8 +55,12 @@ namespace ASPRoutingAndModelling
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                name: "Lab2-Route",
+                template: "{controller}/{action}/{x}/{y?}"
+                );
+                routes.MapRoute(
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
